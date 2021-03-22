@@ -16,8 +16,6 @@ public class Despesas {
 	
 	public String getTipo() {
 		return tipo;
-	}
-
-	
+	}	
 	
 }
