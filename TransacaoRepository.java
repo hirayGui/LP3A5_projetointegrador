@@ -14,10 +14,6 @@ public class TransacaoRepository {
 		return trans;
 	}
 	
-	public void delete(Transacao trans) {
-		transacoes.remove(trans);
-	}
-	
 	//retorna todas as transações
 	public List<Transacao> getAll(){
 		return transacoes;
