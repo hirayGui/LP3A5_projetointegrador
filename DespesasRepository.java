@@ -35,9 +35,9 @@ private List<Despesas> desps = new ArrayList<>();
 	public double getDespesaTotal() {
 		List<Double> lista = new ArrayList<>();
 		
-		for(Despesas desp : desps) {
+		for(Despesas desp : desps)
 			lista.add(desp.getValor());
-		}
+		
 		Optional<Double> soma = lista.stream()
 				.reduce((n1, n2) -> n1 + n2);
 		
