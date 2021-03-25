@@ -1,5 +1,9 @@
 package projeto_integrador;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class Conta {
 
 	private String nome, numero_conta;
@@ -19,6 +23,18 @@ public class Conta {
 			if(tipo == "saida" || tipo == "Saida") {
 				this.saldo = this.saldo - valor;
 			}
+	}
+	
+	
+	public Date setDataFormatada(String data_transacao) {
+		try {
+			SimpleDateFormat formatado = new SimpleDateFormat("yyyy-MM-dd");
+			Date dataFormat = formatado.parse(data_transacao);
+			return dataFormat;
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		return null;
 	}
 	
 	public String getNome() {

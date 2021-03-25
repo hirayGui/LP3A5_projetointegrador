@@ -11,6 +11,7 @@ private List<Despesas> desps = new ArrayList<>();
 	
 	public Despesas adicionarDespesa(Despesas desp) {
 		desps.add(desp);
+		System.out.println("Despesa adicionada com sucesso!");
 		return desp;
 	}
 	
@@ -19,8 +20,12 @@ private List<Despesas> desps = new ArrayList<>();
 	}
 	
 	//retorna todas as despesas
-	public List<Despesas> getAll(){
-		return desps;
+	public void getAll(){
+		for(Despesas D : desps) {
+			System.out.println("Tipo: " + D.getTipo());
+			System.out.println("Valor: " + D.getValor());
+			System.out.println("\n");
+		}
 	}
 	
 	//puxa a despesa pelo seu tipo
